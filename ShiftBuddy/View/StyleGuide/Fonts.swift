@@ -9,6 +9,14 @@ import UIKit
 
 extension UIFont {
     class var header: UIFont {
-        return UIFont(name: "asfsdf", size: 10.0)!
+        return UIFont(name: "Poppins-Regular", size: 40.0)!
+    }
+    
+    class var textField: UIFont {
+        return UIFont(name: "Poppins-Regular", size: 16.0)!
+    }
+    
+    class var button: UIFont {
+        return UIFont(name: "Poppins-Regular", size: 16.0)!
     }
 }
