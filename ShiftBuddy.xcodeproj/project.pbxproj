@@ -13,9 +13,12 @@
 		55D8246725353466007358BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D8246525353466007358BB /* Main.storyboard */; };
 		55D824692535346C007358BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D824682535346C007358BB /* Assets.xcassets */; };
 		55D8246C2535346C007358BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D8246A2535346C007358BB /* LaunchScreen.storyboard */; };
+		7FB1B6377A332413E6501F7E /* Pods_ShiftBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0928D66A2503236D0C5B7B2B /* Pods_ShiftBuddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0928D66A2503236D0C5B7B2B /* Pods_ShiftBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1907838984090B305453AD /* Pods-ShiftBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftBuddy.release.xcconfig"; path = "Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		55D8245C25353466007358BB /* ShiftBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D8245F25353466007358BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D8246125353466007358BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		55D824682535346C007358BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D8246B2535346C007358BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D8246D2535346C007358BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C609A3E55F7BD9CE334BFB /* Pods-ShiftBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftBuddy.debug.xcconfig"; path = "Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB1B6377A332413E6501F7E /* Pods_ShiftBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				55D8245E25353466007358BB /* ShiftBuddy */,
 				55D8245D25353466007358BB /* Products */,
+				6635135D1DA1D29E235E2A30 /* Pods */,
+				F80E7351810BBC2E161CFBBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = ShiftBuddy;
 			sourceTree = "<group>";
 		};
+		6635135D1DA1D29E235E2A30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6C609A3E55F7BD9CE334BFB /* Pods-ShiftBuddy.debug.xcconfig */,
+				0C1907838984090B305453AD /* Pods-ShiftBuddy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F80E7351810BBC2E161CFBBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0928D66A2503236D0C5B7B2B /* Pods_ShiftBuddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55D824702535346C007358BB /* Build configuration list for PBXNativeTarget "ShiftBuddy" */;
 			buildPhases = (
+				FB761C67ADDD24C210FA1356 /* [CP] Check Pods Manifest.lock */,
 				55D8245825353466007358BB /* Sources */,
 				55D8245925353466007358BB /* Frameworks */,
 				55D8245A25353466007358BB /* Resources */,
+				81E12D86674E54F8B5899CBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81E12D86674E54F8B5899CBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB761C67ADDD24C210FA1356 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftBuddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55D8245825353466007358BB /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		55D824712535346C007358BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C609A3E55F7BD9CE334BFB /* Pods-ShiftBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		55D824722535346C007358BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1907838984090B305453AD /* Pods-ShiftBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
