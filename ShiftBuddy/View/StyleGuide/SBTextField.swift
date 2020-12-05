@@ -9,19 +9,36 @@ import UIKit
 
 class SBTextField: UITextField {
     
-    func setupStyle(text: String) {
+    let padding = UIEdgeInsets(top: 9, left: 18, bottom: 13, right: 18)
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    func setupStyle(_ placeholderText: String?) {
         font = .textField
         textColor = .fieldColor
-        self.text = text
         autocorrectionType    = .no
-        layer.cornerRadius    = frame.size.height/3
         clipsToBounds         = true
+        backgroundColor = .white
         
-        let placeholder       = self.placeholder != nil ? self.placeholder! : ""
+        let placeholder       = placeholderText ?? ""
         let placeholderFont   = UIFont.textField
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes:
-            [NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+            [NSAttributedString.Key.foregroundColor: UIColor.placeholderText,
              NSAttributedString.Key.font: placeholderFont])
-    
+        textAlignment = .left
+        
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.grayBorder.cgColor
+        layer.cornerRadius = 6
     }
 }

@@ -9,14 +9,22 @@ import UIKit
 
 extension UIFont {
     class var header: UIFont {
-        return UIFont(name: "Poppins-Regular", size: 40.0)!
+        return UIFont(name: "Poppins-SemiBold", size: 32.0)!
+    }
+    
+    class var paragraph: UIFont {
+        return UIFont(name: "Poppins-Regular", size: 14.0)!
     }
     
     class var textField: UIFont {
-        return UIFont(name: "Poppins-Regular", size: 16.0)!
+        return UIFont(name: "Poppins-Regular", size: 12.0)!
     }
     
-    class var button: UIFont {
-        return UIFont(name: "Poppins-Regular", size: 16.0)!
+    class var subtitle: UIFont {
+        return UIFont(name: "Poppins-Regular", size: 10.0)!
+    }
+    
+    class var buttonText: UIFont {
+        return UIFont(name: "Poppins-SemiBold", size: 12.0)!
     }
 }

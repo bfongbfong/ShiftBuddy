@@ -9,13 +9,11 @@ import UIKit
 
 class SBButton: UIButton {
     
-    func setupStyle() {
-        
-        backgroundColor = .buttonColor
-        backgroundColor     = #colorLiteral(red: 0.9098039216, green: 0.3764705882, blue: 0.2588235294, alpha: 1)
-        titleLabel?.font    = UIFont(name: "Montserrat-SemiBold", size: 18)
-        layer.cornerRadius  = frame.size.height/3
+    func setupStyle(_ text: String) {
+        backgroundColor = .darkBlue
+        titleLabel?.font    = .buttonText
+        layer.cornerRadius  = 6
         setTitleColor(.white, for: .normal)
-
+        setTitle(text, for: .normal)
     }
 }
