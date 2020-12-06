@@ -37,6 +37,7 @@
 		55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DEC25353B890018BEC9 /* Fonts.swift */; };
 		55EB4DF125353B900018BEC9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DF025353B900018BEC9 /* Colors.swift */; };
 		55EB4DF425353BB30018BEC9 /* SBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DF325353BB30018BEC9 /* SBTextField.swift */; };
+		55FCEF0A257D50B60017B687 /* LoginVC+UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FCEF09257D50B60017B687 /* LoginVC+UISetup.swift */; };
 		7FB1B6377A332413E6501F7E /* Pods_ShiftBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0928D66A2503236D0C5B7B2B /* Pods_ShiftBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		55EB4DEC25353B890018BEC9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		55EB4DF025353B900018BEC9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		55EB4DF325353BB30018BEC9 /* SBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTextField.swift; sourceTree = "<group>"; };
+		55FCEF09257D50B60017B687 /* LoginVC+UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+UISetup.swift"; sourceTree = "<group>"; };
 		F6C609A3E55F7BD9CE334BFB /* Pods-ShiftBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftBuddy.debug.xcconfig"; path = "Target Support Files/Pods-ShiftBuddy/Pods-ShiftBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			children = (
 				55EB4DEA25353B5A0018BEC9 /* StyleGuide */,
 				55D8246325353466007358BB /* LoginViewController.swift */,
+				55FCEF09257D50B60017B687 /* LoginVC+UISetup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */,
 				55EB4DF125353B900018BEC9 /* Colors.swift in Sources */,
+				55FCEF0A257D50B60017B687 /* LoginVC+UISetup.swift in Sources */,
 				55D8246425353466007358BB /* LoginViewController.swift in Sources */,
 				55D8246025353466007358BB /* AppDelegate.swift in Sources */,
 				555311DA257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift in Sources */,
