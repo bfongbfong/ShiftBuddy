@@ -31,7 +31,7 @@
 		555311E0257B0D4300C1BCF3 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 555311DF257B0D4300C1BCF3 /* Poppins */; };
 		55D8246025353466007358BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8245F25353466007358BB /* AppDelegate.swift */; };
 		55D8246225353466007358BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8246125353466007358BB /* SceneDelegate.swift */; };
-		55D8246425353466007358BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8246325353466007358BB /* LoginViewController.swift */; };
+		55D8246425353466007358BB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8246325353466007358BB /* LoginVC.swift */; };
 		55D824692535346C007358BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D824682535346C007358BB /* Assets.xcassets */; };
 		55D8246C2535346C007358BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D8246A2535346C007358BB /* LaunchScreen.storyboard */; };
 		55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DEC25353B890018BEC9 /* Fonts.swift */; };
@@ -69,7 +69,7 @@
 		55D8245C25353466007358BB /* ShiftBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D8245F25353466007358BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D8246125353466007358BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55D8246325353466007358BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		55D8246325353466007358BB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		55D824682535346C007358BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D8246B2535346C007358BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D8246D2535346C007358BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,9 +141,8 @@
 			children = (
 				55D8245F25353466007358BB /* AppDelegate.swift */,
 				55D8246125353466007358BB /* SceneDelegate.swift */,
-				55EB4DE825353B1F0018BEC9 /* Model */,
-				55EB4DE925353B2E0018BEC9 /* ViewModel */,
 				55EB4DE425353AF40018BEC9 /* View */,
+				55FCEF32257D816B0017B687 /* ViewControllers */,
 				55D824682535346C007358BB /* Assets.xcassets */,
 				55D8246A2535346C007358BB /* LaunchScreen.storyboard */,
 				55D8246D2535346C007358BB /* Info.plist */,
@@ -155,24 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				55EB4DEA25353B5A0018BEC9 /* StyleGuide */,
-				55D8246325353466007358BB /* LoginViewController.swift */,
-				55FCEF09257D50B60017B687 /* LoginVC+UISetup.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		55EB4DE825353B1F0018BEC9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		55EB4DE925353B2E0018BEC9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		55EB4DEA25353B5A0018BEC9 /* StyleGuide */ = {
@@ -187,6 +170,23 @@
 				555311D9257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift */,
 			);
 			path = StyleGuide;
+			sourceTree = "<group>";
+		};
+		55FCEF0C257D7BAC0017B687 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				55D8246325353466007358BB /* LoginVC.swift */,
+				55FCEF09257D50B60017B687 /* LoginVC+UISetup.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		55FCEF32257D816B0017B687 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55FCEF0C257D7BAC0017B687 /* Login */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6635135D1DA1D29E235E2A30 /* Pods */ = {
@@ -341,7 +341,7 @@
 				55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */,
 				55EB4DF125353B900018BEC9 /* Colors.swift in Sources */,
 				55FCEF0A257D50B60017B687 /* LoginVC+UISetup.swift in Sources */,
-				55D8246425353466007358BB /* LoginViewController.swift in Sources */,
+				55D8246425353466007358BB /* LoginVC.swift in Sources */,
 				55D8246025353466007358BB /* AppDelegate.swift in Sources */,
 				555311DA257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift in Sources */,
 				55EB4DF425353BB30018BEC9 /* SBTextField.swift in Sources */,

@@ -53,10 +53,10 @@ extension LoginViewController {
         headersStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
         let biggestTitleLabel = SBLabel()
-        biggestTitleLabel.setupH1("Shift Buddy")
+        biggestTitleLabel.setupH1(Text.HEADER)
         
         let subtitleLabel = SBLabel()
-        subtitleLabel.setupParagraph("Schedule and trade shifts with colleagues")
+        subtitleLabel.setupParagraph(Text.BUTTON_SUBTITLE)
 
         headersStackView.addArrangedSubview(biggestTitleLabel)
         headersStackView.addArrangedSubview(subtitleLabel)
@@ -71,18 +71,15 @@ extension LoginViewController {
         textFieldStackView.axis = .vertical
         textFieldStackView.spacing = 17
         textFieldStackView.alignment = .fill
-//        textFieldStackView.distribution = .fill
+//        textFieldStackView.distribution = .fill not sure if we need this
         
         textFieldStackView.topAnchor.constraint(equalTo: headersStackView.bottomAnchor, constant: 40).isActive = true
         textFieldStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         textFieldStackView.widthAnchor.constraint(equalToConstant: 326).isActive = true
         
+        emailTextField.setupStyle(Text.EMAIL_PLACEHOLDER)
         
-        let emailTextField = SBTextField()
-        emailTextField.setupStyle("Enter your Email")
-        
-        let passwordTextField = SBTextField()
-        passwordTextField.setupStyle("Enter Password")
+        passwordTextField.setupStyle(Text.PASSWORD_PLACEHOLDER)
         passwordTextField.isSecureTextEntry = true
         
         textFieldStackView.addArrangedSubview(emailTextField)
@@ -93,7 +90,7 @@ extension LoginViewController {
     private func setupBottomButtonStackView(_ textFieldStackView: UIStackView) -> UIStackView {
         let bottomButtonStackView = UIStackView()
         bottomButtonStackView.translatesAutoresizingMaskIntoConstraints = false
-        textFieldStackView.addSubview(bottomButtonStackView)
+        self.view.addSubview(bottomButtonStackView)
         
         bottomButtonStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 40).isActive = true
         bottomButtonStackView.widthAnchor.constraint(equalToConstant: 326).isActive = true
@@ -104,15 +101,31 @@ extension LoginViewController {
         bottomButtonStackView.alignment = .fill
         bottomButtonStackView.spacing = 23
         
-        let loginButton = SBButton()
-        loginButton.setupStyle("Log In")
+        loginButton.setupStyle(Text.LOGIN)
         
-        let signupLabel = SBLabel()
-        signupLabel.setupSubtitle("Don't have an account yet? Sign up")
+        signupLabel.setupSubtitle(Text.BUTTON_SUBTITLE)
         signupLabel.textAlignment = .center
+        
+        let underlineAttriString = NSMutableAttributedString(string: Text.BUTTON_SUBTITLE)
+        let range1 = (Text.BUTTON_SUBTITLE as NSString).range(of: Text.SIGNUP)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemBlue, range: range1)
+        signupLabel.attributedText = underlineAttriString
+        signupLabel.isUserInteractionEnabled = true
+        signupLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapLabel(gesture:))))
         
         bottomButtonStackView.addArrangedSubview(loginButton)
         bottomButtonStackView.addArrangedSubview(signupLabel)
+        
+        bottomButtonStackView.isUserInteractionEnabled = true
         return bottomButtonStackView
+    }
+    
+    
+    @objc func tapLabel(gesture: UITapGestureRecognizer) {
+        let signupRange = (Text.BUTTON_SUBTITLE as NSString).range(of: Text.SIGNUP)
+        
+        if gesture.didTapAttributedTextInLabel(label: signupLabel, inRange: signupRange) {
+            signupTapped()
+        }
     }
 }
