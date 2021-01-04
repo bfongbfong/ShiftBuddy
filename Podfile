@@ -7,5 +7,8 @@ target 'ShiftBuddy' do
 
   # Pods for ShiftBuddy
 pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'IQKeyboardManagerSwift'
+
 
 end

@@ -29,11 +29,13 @@
 		555311DA257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555311D9257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift */; };
 		555311DD257B0C6300C1BCF3 /* SBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555311DC257B0C6300C1BCF3 /* SBLabel.swift */; };
 		555311E0257B0D4300C1BCF3 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 555311DF257B0D4300C1BCF3 /* Poppins */; };
+		558A7C452593BC4300F087E9 /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A7C442593BC4300F087E9 /* UtilityExtensions.swift */; };
 		55D8246025353466007358BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8245F25353466007358BB /* AppDelegate.swift */; };
 		55D8246225353466007358BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8246125353466007358BB /* SceneDelegate.swift */; };
 		55D8246425353466007358BB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8246325353466007358BB /* LoginVC.swift */; };
 		55D824692535346C007358BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D824682535346C007358BB /* Assets.xcassets */; };
 		55D8246C2535346C007358BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D8246A2535346C007358BB /* LaunchScreen.storyboard */; };
+		55EA8A98257D862500099833 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA8A97257D862500099833 /* CreateAccountVC.swift */; };
 		55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DEC25353B890018BEC9 /* Fonts.swift */; };
 		55EB4DF125353B900018BEC9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DF025353B900018BEC9 /* Colors.swift */; };
 		55EB4DF425353BB30018BEC9 /* SBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EB4DF325353BB30018BEC9 /* SBTextField.swift */; };
@@ -66,6 +68,7 @@
 		555311D9257AF5B800C1BCF3 /* UIKitConvenienceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitConvenienceExtensions.swift; sourceTree = "<group>"; };
 		555311DC257B0C6300C1BCF3 /* SBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBLabel.swift; sourceTree = "<group>"; };
 		555311DF257B0D4300C1BCF3 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
+		558A7C442593BC4300F087E9 /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		55D8245C25353466007358BB /* ShiftBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D8245F25353466007358BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D8246125353466007358BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		55D824682535346C007358BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D8246B2535346C007358BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D8246D2535346C007358BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55EA8A97257D862500099833 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		55EB4DEC25353B890018BEC9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		55EB4DF025353B900018BEC9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		55EB4DF325353BB30018BEC9 /* SBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTextField.swift; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		558A7C432593BC3600F087E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				558A7C442593BC4300F087E9 /* UtilityExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		55D8245325353466007358BB = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +151,7 @@
 		55D8245E25353466007358BB /* ShiftBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				558A7C432593BC3600F087E9 /* Extensions */,
 				55D8245F25353466007358BB /* AppDelegate.swift */,
 				55D8246125353466007358BB /* SceneDelegate.swift */,
 				55EB4DE425353AF40018BEC9 /* View */,
@@ -185,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				55FCEF0C257D7BAC0017B687 /* Login */,
+				55EA8A97257D862500099833 /* CreateAccountVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +354,8 @@
 			files = (
 				55EB4DED25353B890018BEC9 /* Fonts.swift in Sources */,
 				55EB4DF125353B900018BEC9 /* Colors.swift in Sources */,
+				558A7C452593BC4300F087E9 /* UtilityExtensions.swift in Sources */,
+				55EA8A98257D862500099833 /* CreateAccountVC.swift in Sources */,
 				55FCEF0A257D50B60017B687 /* LoginVC+UISetup.swift in Sources */,
 				55D8246425353466007358BB /* LoginVC.swift in Sources */,
 				55D8246025353466007358BB /* AppDelegate.swift in Sources */,

@@ -9,12 +9,19 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // MARK: - UI Objects, in order from top to bottom
+    // MARK: More Meta UI Objects
+    let containerView = UIView()
+    let doctorImageStackView = UIStackView()
+    let headersStackView = UIStackView()
+    let textFieldStackView = UIStackView()
+    let bottomButtonStackView = UIStackView()
+
+    // MARK: - UI Objects
     let emailTextField = SBTextField()
     let passwordTextField = SBTextField()
     let loginButton = SBButton()
     let signupLabel = SBLabel()
-    
+        
     // MARK: - Text Strings
     struct Text {
         static let HEADER = "Shift Buddy"
@@ -29,11 +36,23 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        dismissInputWhenTappedAround()
+    }
+    
+    deinit {
+      NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - User Interactions
     func signupTapped() {
         print("signup tapped")
+    }
+    
+    @objc func loginTapped() {
+        print("login tapped")
+        let createAccountVC = CreateAccountViewController()
+        createAccountVC.modalPresentationStyle = .overFullScreen
+        self.present(createAccountVC, animated: true, completion: nil)
     }
 }
 

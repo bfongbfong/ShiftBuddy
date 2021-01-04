@@ -8,22 +8,29 @@
 import UIKit
 
 extension LoginViewController {
+
     func setupUI() {
         self.view.backgroundColor = .white
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(containerView)
+        
+        containerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
+        containerView.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 0.0).isActive = true
 
-        let doctorImageStackView = setupDoctorImageStackView()
-        let headersStackView = setupHeadersStackView(doctorImageStackView)
-        let textFieldStackView = setupTextFieldStackView(headersStackView)
-        let bottomButtonStackView = setupBottomButtonStackView(textFieldStackView)
+        setupDoctorImageStackView()
+        setupHeadersStackView(doctorImageStackView)
+        setupTextFieldStackView(headersStackView)
+        setupBottomButtonStackView(textFieldStackView)
     }
     
-    private func setupDoctorImageStackView() -> UIStackView {
-        let doctorImageStackView = UIStackView()
+    private func setupDoctorImageStackView() {
         doctorImageStackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(doctorImageStackView)
+        containerView.addSubview(doctorImageStackView)
 
-        doctorImageStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        NSLayoutConstraint(item: doctorImageStackView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 0.5, constant: 0.0).isActive = true
+        doctorImageStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
+        NSLayoutConstraint(item: doctorImageStackView, attribute: .centerY, relatedBy: .equal, toItem: containerView, attribute: .centerY, multiplier: 0.5, constant: 0.0).isActive = true
         
         let womanDoctorImageView = UIImageView()
         womanDoctorImageView.image = UIImage(named: "icons-images-doctor-woman")
@@ -37,20 +44,18 @@ extension LoginViewController {
         
         doctorImageStackView.addArrangedSubview(womanDoctorImageView)
         doctorImageStackView.addArrangedSubview(manDoctorImageView)
-        return doctorImageStackView
     }
     
-    private func setupHeadersStackView(_ doctorImageStackView: UIStackView) -> UIStackView {
-        let headersStackView = UIStackView()
+    private func setupHeadersStackView(_ doctorImageStackView: UIStackView) {
         headersStackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(headersStackView)
+        containerView.addSubview(headersStackView)
         
         headersStackView.axis = .vertical
         headersStackView.spacing = 10
         headersStackView.alignment = .center
         
         headersStackView.topAnchor.constraint(equalTo: doctorImageStackView.bottomAnchor, constant: 20).isActive = true
-        headersStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        headersStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         
         let biggestTitleLabel = SBLabel()
         biggestTitleLabel.setupH1(Text.HEADER)
@@ -60,13 +65,11 @@ extension LoginViewController {
 
         headersStackView.addArrangedSubview(biggestTitleLabel)
         headersStackView.addArrangedSubview(subtitleLabel)
-        return headersStackView
     }
     
-    private func setupTextFieldStackView(_ headersStackView: UIStackView) -> UIStackView {
-        let textFieldStackView = UIStackView()
+    private func setupTextFieldStackView(_ headersStackView: UIStackView) {
         textFieldStackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(textFieldStackView)
+        containerView.addSubview(textFieldStackView)
         
         textFieldStackView.axis = .vertical
         textFieldStackView.spacing = 17
@@ -74,7 +77,7 @@ extension LoginViewController {
 //        textFieldStackView.distribution = .fill not sure if we need this
         
         textFieldStackView.topAnchor.constraint(equalTo: headersStackView.bottomAnchor, constant: 40).isActive = true
-        textFieldStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        textFieldStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         textFieldStackView.widthAnchor.constraint(equalToConstant: 326).isActive = true
         
         emailTextField.setupStyle(Text.EMAIL_PLACEHOLDER)
@@ -84,13 +87,11 @@ extension LoginViewController {
         
         textFieldStackView.addArrangedSubview(emailTextField)
         textFieldStackView.addArrangedSubview(passwordTextField)
-        return textFieldStackView
     }
     
-    private func setupBottomButtonStackView(_ textFieldStackView: UIStackView) -> UIStackView {
-        let bottomButtonStackView = UIStackView()
+    private func setupBottomButtonStackView(_ textFieldStackView: UIStackView) {
         bottomButtonStackView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(bottomButtonStackView)
+        containerView.addSubview(bottomButtonStackView)
         
         bottomButtonStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 40).isActive = true
         bottomButtonStackView.widthAnchor.constraint(equalToConstant: 326).isActive = true
@@ -102,6 +103,7 @@ extension LoginViewController {
         bottomButtonStackView.spacing = 23
         
         loginButton.setupStyle(Text.LOGIN)
+        loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         
         signupLabel.setupSubtitle(Text.BUTTON_SUBTITLE)
         signupLabel.textAlignment = .center
@@ -117,7 +119,6 @@ extension LoginViewController {
         bottomButtonStackView.addArrangedSubview(signupLabel)
         
         bottomButtonStackView.isUserInteractionEnabled = true
-        return bottomButtonStackView
     }
     
     
